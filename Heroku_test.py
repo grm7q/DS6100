@@ -62,6 +62,9 @@ gss_display = gss_display.rename({'sex':'Sex',
 gss_display = round(gss_display, 2)
 
 
+table = ff.create_table(gss_display)
+
+
 gss_bar = gss_clean.groupby(['sex','male_breadwinner']).size().reset_index()
 gss_bar = gss_bar.rename({0:'count',
                          'sex':'Sex',
