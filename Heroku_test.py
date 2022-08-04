@@ -133,6 +133,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 
 app.layout = html.Div(
@@ -175,5 +176,6 @@ app.layout = html.Div(
 )
 
 
+
 if __name__ == '__main__':
-    app.run_server(mode='external', debug=True)
+    app.run_server(debug=True, port=8051, host='0.0.0.0')
