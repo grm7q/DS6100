@@ -1,4 +1,4 @@
-$ heroku buildpacks:set heroku/python
+heroku buildpacks:set heroku/python
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
